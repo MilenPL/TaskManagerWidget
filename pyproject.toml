@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "task-manager-widget"
+# git tag / release name: v2.29-gnome
+# PEP 440 cannot spell "2.29-gnome", so the wheel carries the equivalent
+# local-version identifier and still sorts after plain "2.29".
+version = "2.29.0+gnome"
+description = "An always-on-bottom liquid-glass task widget for GNOME, plus its settings app."
+requires-python = ">=3.9"
+authors = [{ name = "MilenPL" }]
+keywords = ["gnome", "gtk", "desktop", "widget", "tasks", "wayland", "x11"]
+classifiers = [
+    "Environment :: X11 Applications :: GTK",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Topic :: Desktop Environment :: Gnome",
+    "Topic :: Utilities",
+]
+# PyGObject ships from your distribution (python3-gi / python3-pygobject);
+# it needs system GTK 3 libraries, so it is deliberately not pip-installed.
+dependencies = []
+
+[project.scripts]
+task-widget = "taskwidget.launcher:widget"
+task-widget-settings = "taskwidget.launcher:settings"
+
+[tool.setuptools]
+packages = ["taskwidget"]
+
+[tool.setuptools.package-data]
+# the translations ship inside the wheel
+taskwidget = ["locales/*.json"]

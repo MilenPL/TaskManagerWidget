@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="glass" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#2b3350"/>
+      <stop offset="1" stop-color="#0d0f18"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="0.6" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- floating glass card -->
+  <rect x="16" y="10" width="96" height="108" rx="24" ry="24"
+        fill="url(#glass)" stroke="#ffffff" stroke-opacity="0.22" stroke-width="2"/>
+  <rect x="16" y="10" width="96" height="108" rx="24" ry="24" fill="url(#shine)"/>
+
+  <!-- month grid dots -->
+  <g>
+    <circle cx="36" cy="34" r="5" fill="#ff453a"/>
+    <circle cx="56" cy="34" r="5" fill="#ffd60a"/>
+    <circle cx="76" cy="34" r="5" fill="#30d158"/>
+    <circle cx="96" cy="34" r="5" fill="#0a84ff"/>
+    <circle cx="36" cy="54" r="5" fill="#bf5af2"/>
+    <circle cx="56" cy="54" r="5" fill="#ff6fb5"/>
+    <circle cx="76" cy="54" r="5" fill="#32d5e8"/>
+    <circle cx="96" cy="54" r="5" fill="#ff9f0a"/>
+  </g>
+
+  <!-- gentle divider -->
+  <rect x="28" y="70" width="72" height="2" rx="1" fill="#ffffff" fill-opacity="0.28"/>
+
+  <!-- long-term underscore + task bar -->
+  <rect x="28" y="82" width="52" height="4" rx="2" fill="#0a84ff"/>
+  <rect x="28" y="96" width="72" height="10" rx="5" fill="#ffffff" fill-opacity="0.12"/>
+  <rect x="33" y="99" width="6" height="4" rx="2" fill="#30d158"/>
+</svg>
