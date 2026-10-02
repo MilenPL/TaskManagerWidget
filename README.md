@@ -1,4 +1,5 @@
 # task manager widget
+# UPDATE IN 1H
 
 > **A liquid-glass task widget for the GNOME desktop environment.**
 > An always-on-bottom card that stays under every window, hides from
